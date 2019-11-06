@@ -26,5 +26,13 @@ plt.title("scatter plot")
 
 #--------------------------------------------histogram plot--------------------------------------------------------------------------
 data.deger1.plot(kind="hist",bins=50,figsize=(10,10))#bins=bar sayısı
+#for range in y and normalization 
+data.plot(kind="hist",y="deger2",bins=50,range=(0,5),normed=True)
 #plt.clf() #-->plotu clear eder
+#plt.show()
+
+#ploting all data
+data1 = data.loc[:,["deger1","deger2","deger3"]]
+data1.plot(subplots=True) # tüm değerleri ayrı ayrı tutmak için
+plt.title("Sub plot")
 plt.show()
